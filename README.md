@@ -89,7 +89,7 @@ As a bonus, try to add the DELETE route to the application using the following g
 
 * Satisfies all of the preceding acceptance criteria plus the following:
 
-  * Application front end must connect to an Express.js back end.
+  * ~~Application front end must connect to an Express.js back end.~~
 
   * Application back end must store notes that have a unique id in a JSON file.
 
