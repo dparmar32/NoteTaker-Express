@@ -1,6 +1,6 @@
 const express = require('express')
 const path = require('path');
-const database = require('./db/db.json')
+const database = require('./db/db')
 
 /* Setting express port */
 const PORT = process.env.PORT || 3001;
