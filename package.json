@@ -1,0 +1,25 @@
+{
+  "name": "notetaker-express",
+  "version": "1.0.0",
+  "description": "- [Title](#title) - [Task](#task) - [User Story](#user-story) - [Acceptance Criteria](#acceptance-criteria) - [Mock-Up](#mock-up) - [Getting Started](#getting-started) - [Bonus](#bonus) - [Technical Acceptance Criteria](#technical_acceptance_criteria) - [Deployment](#deployment) - [Application Quality](#applicatio_quality) - [Repository Quality](#repository_quality) - [Review](#review) - [References](#references)",
+  "main": "server.js",
+  "scripts": {
+    "test": "test",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dparmar32/NoteTaker-Express.git"
+  },
+  "author": "Drashtee Parmar",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dparmar32/NoteTaker-Express/issues"
+  },
+  "homepage": "https://github.com/dparmar32/NoteTaker-Express#readme",
+  "dependencies": {
+    "express": "^4.17.2",
+    "router": "^1.3.6",
+    "uuid": "^8.3.2"
+  }
+}
