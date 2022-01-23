@@ -15,7 +15,7 @@ app.get("/api/notes",
     (req, res) => {
         fs.readFile("./db/db.json", (err, data) => {
             if (!err) {
-                var notes = JSON.parse(data);
+                let notes = JSON.parse(data);
                 res.json(notes);
             } else {
                 throw err;
@@ -31,6 +31,23 @@ app.get("/notes",
 app.get("*",
     (req, res) => {
         res.sendFile(path.join(__dirname, "./public/index.html"));
+    });
+
+/* POST: Sending the data */
+/* post data got stored in db.json */
+app.post("/api/notes",
+    (req, res) => {
+        fs.readFile("./db/db.json", (err, data) => {
+            if (!err) {
+                let notes = JSON.parse(data);
+                let noteContent = req.body;
+                noteContent.id = Math.floor(Math.random() * 5000); //max
+                notes.push(noteContent);
+                fs.writeFile("./db/db.json", JSON.stringify(notes), () => res.json(noteContent));
+            } else {
+                throw err;
+            }
+        });
     });
 
 app.listen(PORT, () => console.log(`App listening on port ${PORT}`));
